@@ -58,7 +58,7 @@ import java.text.DecimalFormat;
  */
 public class Convertor {
 
-    private static final DecimalFormat var1 = new DecimalFormat(new String(Container.var1[123], StandardCharsets.UTF_8));
+    private static final DecimalFormat var1 = new DecimalFormat(Container.var1[123]);
 
     public static String convertFrom(String var2) {
         double var3 = Double.parseDouble(var2);
@@ -71,23 +71,23 @@ public class Convertor {
         double var10 = var7 / 365.0;
 
         if(var10 > 1) {
-            return var1.format(var10) + new String(new byte[]{0x20,0x79,0x72,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var10) + " yrs";
         }else if(var9 > 1) {
-            return var1.format(var9) + new String(new byte[]{0x20,0x6d,0x74,0x68,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var9) + " mths";
         }else if(var8 > 1) {
-            return var1.format(var8) + new String(new byte[]{0x20,0x77,0x6b,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var8) + " wks";
         }else if(var7 > 1) {
-            return var1.format(var7) + new String(new byte[]{0x20,0x64}, StandardCharsets.UTF_8);
+            return var1.format(var7) + " d";
         }else if(var6 > 1) {
-            return var1.format(var6) + new String(new byte[]{0x20,0x68,0x72,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var6) + " hrs";
         }else if(var5 > 1) {
-            return var1.format(var5) + new String(new byte[]{0x20,0x6d,0x69,0x6e,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var5) + " mins";
         }else if(var4 > 1) {
-            return var1.format(var4) + new String(new byte[]{0x20,0x73,0x65,0x63,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var4) + " secs";
         }else if(var3 > 1){
-            return var1.format(var3) + new String(new byte[]{0x20,0x6d,0x69,0x6c,0x6c,0x69,0x73}, StandardCharsets.UTF_8);
+            return var1.format(var3) + " millis";
         }else {
-            return new String(new byte[]{0x69,0x6e,0x73,0x74,0x61,0x6e,0x74}, StandardCharsets.UTF_8); 
+            return "instant"; 
         }
     }
 
@@ -100,13 +100,13 @@ public class Convertor {
         double var17 = var15 / 30.0;
         double var18 = var15 / 365.0;
 
-        if(var18 > 1) return new String[] {var1.format(var18), new String(new byte[]{0x30}, StandardCharsets.UTF_8)};
-        else if(var17 > 1) return new String[] {var1.format(var17), new String(new byte[]{0x31}, StandardCharsets.UTF_8)};
-        else if(var16 > 1) return new String[] {var1.format(var16), new String(new byte[]{0x32}, StandardCharsets.UTF_8)};
-        else if(var15 > 1) return new String[] {var1.format(var15), new String(new byte[]{0x33}, StandardCharsets.UTF_8)};
-        else if(var14 > 1) return new String[] {var1.format(var14), new String(new byte[]{0x34}, StandardCharsets.UTF_8)};
-        else if(var13 > 1) return new String[] {var1.format(var13), new String(new byte[]{0x35}, StandardCharsets.UTF_8)};
-        else return new String[] {var1.format(var12), new String(new byte[]{0x36}, StandardCharsets.UTF_8)};
+        if(var18 > 1) return new String[] {var1.format(var18), "0"};
+        else if(var17 > 1) return new String[] {var1.format(var17), "1"};
+        else if(var16 > 1) return new String[] {var1.format(var16), "2"};
+        else if(var15 > 1) return new String[] {var1.format(var15), "3"};
+        else if(var14 > 1) return new String[] {var1.format(var14), "4"};
+        else if(var13 > 1) return new String[] {var1.format(var13), "5"};
+        else return new String[] {var1.format(var12), "6"};
     }
 
 }

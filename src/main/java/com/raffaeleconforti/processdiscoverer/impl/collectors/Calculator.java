@@ -94,25 +94,25 @@ public class Calculator {
     }
 
     private short method2() {
-        short a = Short.parseShort(new String(Container.var1[150], StandardCharsets.UTF_8));
-        a  = (short) method16(a, Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8) + new String(Container.var1[142], StandardCharsets.UTF_8)));
-        a = (short) method14(a, Short.parseShort(new String(Container.var1[142], StandardCharsets.UTF_8)));
-        a = (short) method16(a, Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8) + new String(Container.var1[142], StandardCharsets.UTF_8)));
-        a = (short) method14(a, Short.parseShort(new String(Container.var1[147], StandardCharsets.UTF_8)));
-        a = (short) method16(a, Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8) + new String(Container.var1[142], StandardCharsets.UTF_8)));
-        return (short) method14(a, Short.parseShort(new String(Container.var1[143], StandardCharsets.UTF_8)));
+        short a = Short.parseShort(Container.var1[150]);
+        a  = (short) method16(a, Short.parseShort(Container.var1[151] + Container.var1[142]));
+        a = (short) method14(a, Short.parseShort(Container.var1[142]));
+        a = (short) method16(a, Short.parseShort(Container.var1[151] + Container.var1[142]));
+        a = (short) method14(a, Short.parseShort(Container.var1[147]));
+        a = (short) method16(a, Short.parseShort(Container.var1[151] + Container.var1[142]));
+        return (short) method14(a, Short.parseShort(Container.var1[143]));
     }
 
     private short method3() {
-        short a = Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8));
-        a = (short) method16(a, Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8) + new String(Container.var1[142], StandardCharsets.UTF_8)));
-        return (short) method14(a, Short.parseShort(new String(Container.var1[150], StandardCharsets.UTF_8)));
+        short a = Short.parseShort(Container.var1[151]);
+        a = (short) method16(a, Short.parseShort(Container.var1[151] + Container.var1[142]));
+        return (short) method14(a, Short.parseShort(Container.var1[150]));
     }
 
     private short method4() {
-        short a = Short.parseShort(new String(Container.var1[149], StandardCharsets.UTF_8));
-        a = (short) method16(a, Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8) + new String(Container.var1[142], StandardCharsets.UTF_8)));
-        return (short) method14(a, Short.parseShort(new String(Container.var1[151], StandardCharsets.UTF_8)));
+        short a = Short.parseShort(Container.var1[149]);
+        a = (short) method16(a, Short.parseShort(Container.var1[151] + Container.var1[142]));
+        return (short) method14(a, Short.parseShort(Container.var1[151]));
     }
 
     public String method5() {

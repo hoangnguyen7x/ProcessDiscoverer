@@ -60,19 +60,19 @@ import java.nio.charset.StandardCharsets;
 public class EventNameAnalyser {
 
     public boolean isCompleteEvent(String name) {
-        return name.toLowerCase().endsWith(new String(StringValues.a[120], StandardCharsets.UTF_8));
+        return name.toLowerCase().endsWith(StringValues.b[120]);
     }
 
     public boolean isStartEvent(String name) {
-        return name.toLowerCase().endsWith(new String(StringValues.a[121], StandardCharsets.UTF_8));
+        return name.toLowerCase().endsWith(StringValues.b[121]);
     }
 
     public String getStartEvent(String name) {
-        return name.substring(0, name.length() - 8) + new String(StringValues.a[119], StandardCharsets.UTF_8);
+        return name.substring(0, name.length() - 8) + StringValues.b[119];
     }
 
     public String getCompleteEvent(String name) {
-        return name.substring(0, name.length() - 5) + new String(StringValues.a[118], StandardCharsets.UTF_8);
+        return name.substring(0, name.length() - 5) + StringValues.b[118];
     }
 
     public String getCollapsedEvent(String name) {

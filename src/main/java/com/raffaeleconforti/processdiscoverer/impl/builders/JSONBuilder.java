@@ -79,7 +79,7 @@ import java.util.*;
  */
 public class JSONBuilder {
 
-    private final DecimalFormat decimalFormat = new DecimalFormat(new String(StringValues.a[123], StandardCharsets.UTF_8));
+    private final DecimalFormat decimalFormat = new DecimalFormat(StringValues.b[123]);
 
     private final double change_color_limit = 0.7;
     private final String start_name = "|>";

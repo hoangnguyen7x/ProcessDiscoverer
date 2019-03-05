@@ -78,7 +78,7 @@ import java.util.Set;
  */
 public class BPMNDiagramBuilder {
 
-    private final static DecimalFormat decimalFormat = new DecimalFormat(new String(StringValues.a[123], StandardCharsets.UTF_8));
+    private final static DecimalFormat decimalFormat = new DecimalFormat(StringValues.b[123]);
     private final static String start_name = "|>";
     private final static String end_name = "[]";
     private final ArcInfoCollector arcInfoCollector;

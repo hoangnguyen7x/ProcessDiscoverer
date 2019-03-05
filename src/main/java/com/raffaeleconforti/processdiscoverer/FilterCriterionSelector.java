@@ -72,7 +72,7 @@ import java.util.Map;
  */
 class FilterCriterionSelector {
 
-    private final DecimalFormat decimalFormat = new DecimalFormat(new String(StringValues.a[123], StandardCharsets.UTF_8));
+    private final DecimalFormat decimalFormat = new DecimalFormat(StringValues.b[123]);
 
     PortalContext portalContext;
     private ProcessDiscovererController processDiscovererController;
@@ -88,7 +88,7 @@ class FilterCriterionSelector {
         portalContext = processDiscovererController.portalContext;
 
         filterSelectorW = (Window) portalContext.getUI().createComponent(getClass().getClassLoader(), "zul/filterCriteria.zul", null, null);
-        filterSelectorW.setTitle(new String(new byte[]{0x46,0x69,0x6c,0x74,0x65,0x72,0x20,0x43,0x72,0x69,0x74,0x65,0x72,0x69,0x61,0x20,0x2d,0x20,0x72,0x61,0x66,0x66,0x61,0x65,0x6c,0x65,0x63,0x6f,0x6e,0x66,0x6f,0x72,0x74,0x69,0x2e,0x63,0x6f,0x6d}, StandardCharsets.UTF_8));
+        filterSelectorW.setTitle("Filter Criteria - raffaeleconforti.com");
 
         criteriaList = (Listbox) filterSelectorW.getFellow("criteria");
         updateList();

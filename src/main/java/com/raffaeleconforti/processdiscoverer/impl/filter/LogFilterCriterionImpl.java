@@ -64,7 +64,7 @@ import java.util.Set;
  */
 public abstract class LogFilterCriterionImpl implements LogFilterCriterion {
 
-    protected final String timestamp_code = new String(StringValues.a[122], StandardCharsets.UTF_8);
+    protected final String timestamp_code = StringValues.b[122];
 
     protected final String label;
     protected final String attribute;

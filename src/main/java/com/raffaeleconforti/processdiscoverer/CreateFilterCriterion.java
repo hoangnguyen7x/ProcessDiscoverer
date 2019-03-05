@@ -76,7 +76,7 @@ import static com.raffaeleconforti.processdiscoverer.impl.filter.Level.TRACE;
  */
 class CreateFilterCriterion {
 
-    private final DecimalFormat decimalFormat = new DecimalFormat(new String(StringValues.a[123], StandardCharsets.UTF_8));
+    private final DecimalFormat decimalFormat = new DecimalFormat(StringValues.b[123]);
     private final String label;
 
     private Window createFilterCriterionW;
@@ -119,7 +119,7 @@ class CreateFilterCriterion {
 
     private void setInputs(FilterCriterionSelector filterCriterionSelector, List<LogFilterCriterion> criteria, Map<String, Map<String, Integer>> options_frequency, long min, long max, int pos) throws IOException {
         this.createFilterCriterionW = (Window) filterCriterionSelector.portalContext.getUI().createComponent(getClass().getClassLoader(), "zul/createFilterCriterion.zul", null, null);
-        this.createFilterCriterionW.setTitle(new String(new byte[]{0x43,0x72,0x65,0x61,0x74,0x65,0x20,0x46,0x69,0x6c,0x74,0x65,0x72,0x20,0x43,0x72,0x69,0x74,0x65,0x72,0x69,0x6f,0x6e,0x20,0x2d,0x20,0x72,0x61,0x66,0x66,0x61,0x65,0x6c,0x65,0x63,0x6f,0x6e,0x66,0x6f,0x72,0x74,0x69,0x2e,0x63,0x6f,0x6d}, StandardCharsets.UTF_8));
+        this.createFilterCriterionW.setTitle("Create Filter Criterion - raffaeleconforti.com");
         this.filterCriterionSelector = filterCriterionSelector;
         this.criteria = criteria;
         this.options_frequency = options_frequency;

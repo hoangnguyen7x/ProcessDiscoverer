@@ -86,60 +86,10 @@
                     </instructions>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.1.1</version>
-                <configuration>
-                    <artifactSet>
-                        <includes>
-                            <include>com.raffaeleconforti:bpmn-util</include>
-                            <include>com.raffaeleconforti:foreignkey-discovery</include>
-                            <include>com.raffaeleconforti:statistics</include>
-                            <include>org.ow2.bundles:ow2-bundles-externals-opencsv</include>
-                        </includes>
-                    </artifactSet>
-                    <transformers>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/spring.factories</resource>
-                        </transformer>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/spring.handlers</resource>
-                        </transformer>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/spring.schemas</resource>
-                        </transformer>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/spring.provides</resource>
-                        </transformer>
-                    </transformers>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>com.raffaeleconforti</groupId>
-            <artifactId>bpmn-util</artifactId>
-            <version>1.0.20180719</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.raffaeleconforti</groupId>
-            <artifactId>foreignkey-discovery</artifactId>
-            <version>1.0.20180719</version>
-            <scope>compile</scope>
-        </dependency>
         <dependency>
             <groupId>org.apromore</groupId>
             <artifactId>raffaeleconforti-osgi</artifactId>
@@ -164,43 +114,6 @@
             <version>2.6</version>
             <scope>compile</scope>
         </dependency>
-        
-		<!--
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>pnetreplayer</artifactId>
-            <version>6.5.20170701</version>
-            <scope>compile</scope>
-        </dependency>
-		-->
-
-        <dependency>
-            <groupId>com.raffaeleconforti</groupId>
-            <artifactId>bpmn-util</artifactId>
-            <version>1.0.20180831</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.raffaeleconforti</groupId>
-            <artifactId>foreignkey-discovery</artifactId>
-            <version>1.0.20180831</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.raffaeleconforti</groupId>
-            <artifactId>statistics</artifactId>
-            <version>1.0.20180831</version>
-            <scope>compile</scope>
-        </dependency>
-
-		<!--
-        <dependency>
-            <groupId>com.raffaeleconforti</groupId>
-            <artifactId>process-discoverer-logic</artifactId>
-            <version>1.0.20180719</version>
-            <scope>compile</scope>
-        </dependency>
-        -->
 
         <dependency>
             <groupId>org.apromore</groupId>
@@ -253,11 +166,6 @@
             <artifactId>eclipse-collections-api</artifactId>
             <version>9.2.0</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>bpmn</artifactId>
-            <version>6.5.20180622</version>
         </dependency>
     </dependencies>
 </project>

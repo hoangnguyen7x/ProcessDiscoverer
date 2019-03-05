@@ -61,10 +61,8 @@ import org.apromore.service.ProcessService;
 import org.apromore.service.bpmndiagramimporter.BPMNDiagramImporter;
 import org.apromore.service.helper.UserInterfaceHelper;
 import org.springframework.stereotype.Component;
-
 import javax.inject.Inject;
 import java.util.Locale;
-
 import static com.raffaeleconforti.processdiscoverer.impl.VisualizationType.DURATION;
 
 /**

@@ -67,8 +67,8 @@ import java.nio.charset.StandardCharsets;
  */
 public class NodeInfoCollector {
 
-    private final String plus_complete_code = new String(StringValues.a[120], StandardCharsets.UTF_8);
-    private final String plus_start_code = new String(StringValues.a[121], StandardCharsets.UTF_8);
+    private final String plus_complete_code = StringValues.b[120];
+    private final String plus_start_code = StringValues.b[121];
 
     private final int number_of_traces;
 
