@@ -956,6 +956,7 @@ public class ProcessDiscovererController {
                             definitions.exportElements() +
                             "</definitions>";
 
+                    Exception bimpAnnotationException = null;
                     if (annotateForBIMP) {
                         try {
                             model = bimpAnnotationService.annotateBPMNModelForBIMP(model, log);
@@ -963,6 +964,7 @@ public class ProcessDiscovererController {
                         } catch (Exception e) {
                             //LOGGER.warn("Unable to annotate BPMN model for BIMP simulation", e);
                             Messagebox.show("Unable to annotate BPMN model for BIMP simulation (" + e.getMessage() + ")\n\nModel will be created without annotations.", "Attention", Messagebox.OK, Messagebox.EXCLAMATION);
+                            bimpAnnotationException = e;
                         }
                     }
 
@@ -1007,7 +1009,10 @@ public class ProcessDiscovererController {
                             user,
                             publicModel));
 
-                    portalContext.refreshContent();
+                    // Calling the refresh if the exception messagebox is present makes it vanish
+                    if (bimpAnnotationException == null) {
+                        portalContext.refreshContent();
+                    }
                 }
             };
 
